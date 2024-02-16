@@ -19,7 +19,15 @@ button.addEventListener('click', () => {
     input.value = password;
 })
 
+
+
 function copyToClipboard(){
-    let CopyBtn = document.getElementById('copy-btn');
+    input.select();
+
+    input.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(input.value);
+
+    alert("Copied the Text " +  input.value)
 
 }
